@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Seguridad Social</title>
+    <meta name="description" content="Plataforma de tests de Seguridad Social: preguntas tipo examen, casos jurisprudenciales y casos prácticos de cálculo">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-area">
+                    <div class="logo-icon">🛡️</div>
+                    <div>
+                        <h1>Seguridad Social</h1>
+                        <p class="subtitle">Tests de Práctica · Casos · Cálculos</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== MENU SCREEN ===== -->
+        <main id="menuScreen" class="screen active">
+            <div class="menu-container">
+                <div class="menu-hero">
+                    <h2>Elige tu Actividad</h2>
+                    <p>Selecciona el test, caso o ejercicio que deseas practicar</p>
+                </div>
+
+                <!-- Tests tipo examen -->
+                <div class="menu-section">
+                    <h3 class="section-title">
+                        <span class="section-icon">📝</span>
+                        Tests Tipo Examen
+                    </h3>
+                    <div class="cards-grid">
+                        <button class="test-card" onclick="selectTest('test')" id="btn-test">
+                            <div class="card-badge">64 preguntas</div>
+                            <div class="card-icon">📚</div>
+                            <h4>TEST COMPLETO</h4>
+                            <p>Todas las preguntas · 64 cuestiones</p>
+                        </button>
+                        <button class="test-card" onclick="selectTest('test_random')" id="btn-test-random">
+                            <div class="card-badge">64 aleatorias</div>
+                            <div class="card-icon">🔀</div>
+                            <h4>TEST ALEATORIO</h4>
+                            <p>Preguntas en orden aleatorio</p>
+                        </button>
+                        <button class="test-card" onclick="selectTest('test20')" id="btn-test20">
+                            <div class="card-badge">20 preguntas</div>
+                            <div class="card-icon">⚡</div>
+                            <h4>TEST RÁPIDO</h4>
+                            <p>20 preguntas al azar</p>
+                        </button>
+                        <button class="test-card" onclick="selectTest('test_bloque1')" id="btn-test-bloque1">
+                            <div class="card-badge">21 preguntas</div>
+                            <div class="card-icon">🏥</div>
+                            <h4>BLOQUE 1</h4>
+                            <p>Asistencia sanitaria · Contingencias · Mutuas (P1-P21)</p>
+                        </button>
+                        <button class="test-card" onclick="selectTest('test_bloque2')" id="btn-test-bloque2">
+                            <div class="card-badge">22 preguntas</div>
+                            <div class="card-icon">💰</div>
+                            <h4>BLOQUE 2</h4>
+                            <p>Muerte · Jubilación · IP (P22-P43)</p>
+                        </button>
+                        <button class="test-card" onclick="selectTest('test_bloque3')" id="btn-test-bloque3">
+                            <div class="card-badge">21 preguntas</div>
+                            <div class="card-icon">🏛️</div>
+                            <h4>BLOQUE 3</h4>
+                            <p>IP parcial · Desempleo · IMV · SNS (P44-P64)</p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Casos Jurisprudenciales -->
+                <div class="menu-section">
+                    <h3 class="section-title">
+                        <span class="section-icon">⚖️</span>
+                        Casos Jurisprudenciales
+                    </h3>
+                    <div class="cards-grid">
+                        <button class="test-card casos" onclick="showCasos('juris')" id="btn-juris">
+                            <div class="card-badge">19 casos</div>
+                            <div class="card-icon">🔍</div>
+                            <h4>¿ES ACCIDENTE DE TRABAJO?</h4>
+                            <p>Casos cortos de jurisprudencia · In itinere · Teletrabajo · Imprudencia</p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Casos Prácticos -->
+                <div class="menu-section">
+                    <h3 class="section-title">
+                        <span class="section-icon">🧮</span>
+                        Casos Prácticos de Cálculo
+                    </h3>
+                    <div class="cards-grid">
+                        <button class="test-card practicos" onclick="showCasos('practicos')" id="btn-practicos">
+                            <div class="card-badge">5 ejercicios</div>
+                            <div class="card-icon">📊</div>
+                            <h4>CASOS DE CÁLCULO</h4>
+                            <p>IT · IP · Jubilación · Cotización · Base reguladora</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ===== MODE SELECTION SCREEN ===== -->
+        <main id="modeScreen" class="screen">
+            <div class="menu-container">
+                <div class="menu-hero">
+                    <h2 id="modeTestName">Test</h2>
+                    <p>Elige el modo de práctica</p>
+                </div>
+                <div class="mode-cards">
+                    <button class="mode-card" onclick="startWithMode('examen')" id="btn-mode-examen">
+                        <div class="mode-icon">📝</div>
+                        <h3>Modo Examen</h3>
+                        <p class="mode-desc">Responde todas las preguntas y al finalizar verás tus resultados, puntuación y correcciones.</p>
+                    </button>
+                    <button class="mode-card" onclick="startWithMode('repaso')" id="btn-mode-repaso">
+                        <div class="mode-icon">📖</div>
+                        <h3>Modo Repaso</h3>
+                        <p class="mode-desc">Responde cada pregunta y pulsa "Validar" para ver al instante si es correcta.</p>
+                    </button>
+                </div>
+                <button class="btn-back" onclick="goToMenu()" style="margin-top:24px;">← Volver al menú</button>
+            </div>
+        </main>
+
+        <!-- ===== TEST SCREEN ===== -->
+        <main id="testScreen" class="screen">
+            <div class="test-container">
+                <div class="test-header">
+                    <div class="test-header-left">
+                        <button class="btn-back" onclick="goToMenu()" id="btn-back-menu">← Volver al menú</button>
+                        <h2 id="testTitle" class="test-title"></h2>
+                    </div>
+                    <div class="test-progress">
+                        <div class="progress-text">
+                            Pregunta <span id="currentQ">1</span> de <span id="totalQ">0</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-area" id="questionArea">
+                    <div class="question-card">
+                        <div class="question-number" id="questionNumber"></div>
+                        <div class="question-text" id="questionText"></div>
+                        <div class="question-warning" id="questionWarning" style="display:none;">
+                            ⚠️ Esta pregunta no se ve bien en el documento original.
+                        </div>
+                        <div class="options-list" id="optionsList"></div>
+                        <div id="validateArea" style="display:none;">
+                            <button class="btn-validate" id="btnValidate" onclick="validateAnswer()">✔ Validar respuesta</button>
+                        </div>
+                        <div class="feedback-area" id="feedbackArea" style="display:none;"></div>
+                    </div>
+                </div>
+
+                <div class="test-nav">
+                    <button class="btn-nav btn-prev" id="btnPrev" onclick="prevQuestion()">← Anterior</button>
+                    <div class="question-dots" id="questionDots"></div>
+                    <button class="btn-nav btn-next" id="btnNext" onclick="nextQuestion()">Siguiente →</button>
+                    <button class="btn-nav btn-finish" id="btnFinish" onclick="finishTest()" style="display:none;">✅ Finalizar Test</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- ===== RESULTS SCREEN ===== -->
+        <main id="resultsScreen" class="screen">
+            <div class="results-container">
+                <div class="results-card">
+                    <div class="results-header">
+                        <h2>Resultados</h2>
+                        <h3 id="resultsTestName"></h3>
+                    </div>
+                    <div class="score-display">
+                        <div class="score-circle" id="scoreCircle">
+                            <svg viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="54" class="score-bg"/>
+                                <circle cx="60" cy="60" r="54" class="score-fg" id="scoreFg"/>
+                            </svg>
+                            <div class="score-value" id="scoreValue">0.00</div>
+                        </div>
+                    </div>
+                    <div class="results-stats">
+                        <div class="stat-item correct">
+                            <span class="stat-icon">✅</span>
+                            <span class="stat-label">Aciertos</span>
+                            <span class="stat-value" id="statCorrect">0</span>
+                        </div>
+                        <div class="stat-item wrong">
+                            <span class="stat-icon">❌</span>
+                            <span class="stat-label">Fallos</span>
+                            <span class="stat-value" id="statWrong">0</span>
+                        </div>
+                        <div class="stat-item blank">
+                            <span class="stat-icon">⬜</span>
+                            <span class="stat-label">En blanco</span>
+                            <span class="stat-value" id="statBlank">0</span>
+                        </div>
+                        <div class="stat-item skipped">
+                            <span class="stat-icon">⏭️</span>
+                            <span class="stat-label">No visibles</span>
+                            <span class="stat-value" id="statSkipped">0</span>
+                        </div>
+                    </div>
+                    <div class="results-detail-info">
+                        <p id="scoringInfo"></p>
+                    </div>
+                    <div class="results-actions">
+                        <button class="btn-primary" onclick="reviewTest()" id="btn-review">📋 Revisar respuestas</button>
+                        <button class="btn-secondary" onclick="retryTest()" id="btn-retry">🔄 Repetir test</button>
+                        <button class="btn-secondary" onclick="goToMenu()" id="btn-menu-results">🏠 Volver al menú</button>
+                    </div>
+                </div>
+
+                <div class="review-section" id="reviewSection" style="display:none;">
+                    <h3>Revisión de respuestas</h3>
+                    <div id="reviewList"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ===== CASOS SCREEN ===== -->
+        <main id="casosScreen" class="screen">
+            <div class="casos-container">
+                <div class="casos-header">
+                    <button class="btn-back" onclick="goToMenu()">← Volver al menú</button>
+                    <h2 id="casosTitle"></h2>
+                    <p id="casosSubtitle" class="casos-subtitle"></p>
+                </div>
+                <div id="casosList" class="casos-list"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
