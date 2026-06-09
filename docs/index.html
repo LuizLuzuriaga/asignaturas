@@ -27,86 +27,101 @@
         <main id="menuScreen" class="screen active">
             <div class="menu-container">
                 <div class="menu-hero">
-                    <h2>Elige tu Actividad</h2>
-                    <p>Selecciona el test, caso o ejercicio que deseas practicar</p>
+                    <div class="hero-badge">PLATAFORMA DE ESTUDIO</div>
+                    <h2>Seguridad Social</h2>
+                    <p>64 preguntas · 19 casos jurisprudenciales · 5 ejercicios de cálculo</p>
                 </div>
 
-                <!-- Tests tipo examen -->
-                <div class="menu-section">
-                    <h3 class="section-title">
-                        <span class="section-icon">📝</span>
-                        Tests Tipo Examen
-                    </h3>
-                    <div class="cards-grid">
-                        <button class="test-card" onclick="selectTest('test')" id="btn-test">
-                            <div class="card-badge">64 preguntas</div>
+                <!-- Bento Grid -->
+                <div class="bento-grid">
+                    <!-- Featured: Test Completo (spans 2 cols, tall) -->
+                    <button class="bento-card bento-featured" onclick="selectTest('test')" id="btn-test">
+                        <div class="bento-glow"></div>
+                        <div class="card-badge">64 preguntas</div>
+                        <div class="bento-card-inner">
                             <div class="card-icon">📚</div>
                             <h4>TEST COMPLETO</h4>
-                            <p>Todas las preguntas · 64 cuestiones</p>
-                        </button>
-                        <button class="test-card" onclick="selectTest('test_random')" id="btn-test-random">
-                            <div class="card-badge">64 aleatorias</div>
+                            <p>Todas las preguntas en orden · Modo examen o repaso</p>
+                        </div>
+                        <div class="bento-tag">RECOMENDADO</div>
+                    </button>
+
+                    <!-- Test Aleatorio (spans 1 col, tall) -->
+                    <button class="bento-card bento-tall" onclick="selectTest('test_random')" id="btn-test-random">
+                        <div class="bento-glow"></div>
+                        <div class="card-badge">64 aleatorias</div>
+                        <div class="bento-card-inner">
                             <div class="card-icon">🔀</div>
                             <h4>TEST ALEATORIO</h4>
                             <p>Preguntas en orden aleatorio</p>
-                        </button>
-                        <button class="test-card" onclick="selectTest('test20')" id="btn-test20">
-                            <div class="card-badge">20 preguntas</div>
+                        </div>
+                    </button>
+
+                    <!-- Test Rápido -->
+                    <button class="bento-card" onclick="selectTest('test20')" id="btn-test20">
+                        <div class="bento-glow"></div>
+                        <div class="card-badge">20 preguntas</div>
+                        <div class="bento-card-inner">
                             <div class="card-icon">⚡</div>
                             <h4>TEST RÁPIDO</h4>
                             <p>20 preguntas al azar</p>
-                        </button>
-                        <button class="test-card" onclick="selectTest('test_bloque1')" id="btn-test-bloque1">
-                            <div class="card-badge">21 preguntas</div>
+                        </div>
+                    </button>
+
+                    <!-- Bloque 1 -->
+                    <button class="bento-card" onclick="selectTest('test_bloque1')" id="btn-test-bloque1">
+                        <div class="bento-glow"></div>
+                        <div class="card-badge">P1–P21</div>
+                        <div class="bento-card-inner">
                             <div class="card-icon">🏥</div>
                             <h4>BLOQUE 1</h4>
-                            <p>Asistencia sanitaria · Contingencias · Mutuas (P1-P21)</p>
-                        </button>
-                        <button class="test-card" onclick="selectTest('test_bloque2')" id="btn-test-bloque2">
-                            <div class="card-badge">22 preguntas</div>
+                            <p>Asistencia sanitaria · Contingencias · Mutuas</p>
+                        </div>
+                    </button>
+
+                    <!-- Bloque 2 -->
+                    <button class="bento-card" onclick="selectTest('test_bloque2')" id="btn-test-bloque2">
+                        <div class="bento-glow"></div>
+                        <div class="card-badge">P22–P43</div>
+                        <div class="bento-card-inner">
                             <div class="card-icon">💰</div>
                             <h4>BLOQUE 2</h4>
-                            <p>Muerte · Jubilación · IP (P22-P43)</p>
-                        </button>
-                        <button class="test-card" onclick="selectTest('test_bloque3')" id="btn-test-bloque3">
-                            <div class="card-badge">21 preguntas</div>
+                            <p>Muerte · Jubilación · IP</p>
+                        </div>
+                    </button>
+
+                    <!-- Bloque 3 -->
+                    <button class="bento-card" onclick="selectTest('test_bloque3')" id="btn-test-bloque3">
+                        <div class="bento-glow"></div>
+                        <div class="card-badge">P44–P64</div>
+                        <div class="bento-card-inner">
                             <div class="card-icon">🏛️</div>
                             <h4>BLOQUE 3</h4>
-                            <p>IP parcial · Desempleo · IMV · SNS (P44-P64)</p>
-                        </button>
-                    </div>
-                </div>
+                            <p>IP parcial · Desempleo · IMV · SNS</p>
+                        </div>
+                    </button>
 
-                <!-- Casos Jurisprudenciales -->
-                <div class="menu-section">
-                    <h3 class="section-title">
-                        <span class="section-icon">⚖️</span>
-                        Casos Jurisprudenciales
-                    </h3>
-                    <div class="cards-grid">
-                        <button class="test-card casos" onclick="showCasos('juris')" id="btn-juris">
-                            <div class="card-badge">19 casos</div>
-                            <div class="card-icon">🔍</div>
+                    <!-- Casos Jurisprudenciales (wide) -->
+                    <button class="bento-card bento-wide bento-casos" onclick="showCasos('juris')" id="btn-juris">
+                        <div class="bento-glow bento-glow-teal"></div>
+                        <div class="card-badge badge-teal">19 casos</div>
+                        <div class="bento-card-inner">
+                            <div class="card-icon">⚖️</div>
                             <h4>¿ES ACCIDENTE DE TRABAJO?</h4>
-                            <p>Casos cortos de jurisprudencia · In itinere · Teletrabajo · Imprudencia</p>
-                        </button>
-                    </div>
-                </div>
+                            <p>Casos cortos de jurisprudencia · In itinere · Teletrabajo · Imprudencia temeraria</p>
+                        </div>
+                    </button>
 
-                <!-- Casos Prácticos -->
-                <div class="menu-section">
-                    <h3 class="section-title">
-                        <span class="section-icon">🧮</span>
-                        Casos Prácticos de Cálculo
-                    </h3>
-                    <div class="cards-grid">
-                        <button class="test-card practicos" onclick="showCasos('practicos')" id="btn-practicos">
-                            <div class="card-badge">5 ejercicios</div>
-                            <div class="card-icon">📊</div>
+                    <!-- Casos Prácticos -->
+                    <button class="bento-card bento-practicos" onclick="showCasos('practicos')" id="btn-practicos">
+                        <div class="bento-glow bento-glow-amber"></div>
+                        <div class="card-badge badge-amber">5 ejercicios</div>
+                        <div class="bento-card-inner">
+                            <div class="card-icon">🧮</div>
                             <h4>CASOS DE CÁLCULO</h4>
                             <p>IT · IP · Jubilación · Cotización · Base reguladora</p>
-                        </button>
-                    </div>
+                        </div>
+                    </button>
                 </div>
             </div>
         </main>
