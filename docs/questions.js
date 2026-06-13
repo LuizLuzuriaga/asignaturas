@@ -262,4 +262,23 @@ const CASOS_PRACTICOS = [
             "¿Cuándo podría haberse jubilado?"
         ]
     },
+    {
+        id: 6,
+        titulo: "IP Total por enfermedad común (nacido 1976)",
+        descripcion: "Un trabajador, nacido el 5 de marzo de 1976, que lleva 3 años trabajando en la empresa, es declarado en situación de Incapacidad Permanente Total para la profesión habitual, derivada de enfermedad común, el 1 de mayo de 2022. En esa fecha, la suma de sus bases de cotización inmediatamente anteriores, computables para el cálculo de la prestación (una vez actualizadas), asciende a 237.000 € y acredita 7 años de cotización. Su empresa está asociada en ambas contingencias a la Mutua Intercomarcal.",
+        preguntas: [
+            "¿Tiene la cotización exigida? ¿Cuál sería su prestación?",
+            "Si hubiera sido por Accidente de Trabajo, ¿tendría derecho a alguna otra prestación?"
+        ]
+    },
+    {
+        id: 7,
+        titulo: "Fallecimiento por accidente in itinere (prestaciones por muerte)",
+        descripcion: "Un trabajador, que acredita 6 meses cotizados al Régimen General de la Seguridad Social, fallece en un accidente de tráfico el día 1 de abril cuando se dirigía desde su domicilio a la empresa para iniciar su jornada de trabajo. En el momento del fallecimiento estaba casado y tenía 1 hijo de 15 años; con la familia vive su madre de 62 años que percibe una prestación no de viudedad. Sus ingresos eran los únicos derivados del trabajo en la unidad familiar y pagan una hipoteca de 900€. Durante el año anterior al accidente, sus retribuciones fueron: un salario fijo mensual de 1.900€, dos pagas extraordinarias de 30 días de salario cada una, una paga de beneficios de 3.000 €, y realizó horas extraordinarias por importe de 1.500 €.",
+        preguntas: [
+            "Determinar las distintas prestaciones de la Seguridad Social a que pudieran tener derecho él y sus derechohabientes, derivadas del accidente y su posterior fallecimiento.",
+            "Requisitos para tener derecho a ellas, beneficiarios, forma de cálculo y cuantía.",
+            "Sujetos responsables de las mismas."
+        ]
+    },
 ];
