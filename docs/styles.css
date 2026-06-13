@@ -1159,6 +1159,48 @@ body::after {
 
 .caso-notes textarea::placeholder { color: var(--text-muted); }
 
+/* Respuesta completa */
+.caso-respuesta-toggle {
+    background: rgba(16, 185, 129, 0.06) !important;
+    border-color: rgba(16, 185, 129, 0.2) !important;
+    color: var(--success) !important;
+}
+
+.caso-respuesta-toggle:hover {
+    background: rgba(16, 185, 129, 0.12) !important;
+    border-color: rgba(16, 185, 129, 0.35) !important;
+    color: var(--success) !important;
+}
+
+.caso-respuesta {
+    margin-top: 12px;
+    display: none;
+}
+.caso-respuesta.visible {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.caso-respuesta-content {
+    padding: 20px 22px;
+    background: rgba(16, 185, 129, 0.04);
+    border: 1px solid rgba(16, 185, 129, 0.12);
+    border-left: 4px solid var(--success);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 0.88rem;
+    line-height: 1.75;
+}
+
+.caso-respuesta-content p {
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+.caso-respuesta-content p:last-child {
+    margin-bottom: 0;
+}
+
 /* ============================================
    Responsive
    ============================================ */
