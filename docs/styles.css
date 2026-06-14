@@ -29,6 +29,9 @@
     --amber: #f59e0b;
     --amber-glow: rgba(245, 158, 11, 0.20);
     --amber-bg: rgba(245, 158, 11, 0.08);
+    --violet: #a78bfa;
+    --violet-glow: rgba(167, 139, 250, 0.20);
+    --violet-bg: rgba(167, 139, 250, 0.08);
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;
@@ -252,6 +255,9 @@ body::after {
 .bento-glow-amber {
     background: radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.06) 0%, transparent 60%);
 }
+.bento-glow-violet {
+    background: radial-gradient(circle at 30% 30%, rgba(167, 139, 250, 0.06) 0%, transparent 60%);
+}
 
 .bento-card:hover .bento-glow { opacity: 1; }
 
@@ -270,6 +276,11 @@ body::after {
 .bento-card.bento-practicos:hover {
     border-color: rgba(245, 158, 11, 0.25);
     box-shadow: var(--shadow-md), 0 0 40px var(--amber-glow);
+}
+
+.bento-card.bento-desarrollo:hover {
+    border-color: rgba(167, 139, 250, 0.25);
+    box-shadow: var(--shadow-md), 0 0 40px var(--violet-glow);
 }
 
 /* Badge */
@@ -298,6 +309,12 @@ body::after {
 .badge-amber {
     color: var(--amber);
     background: var(--amber-bg);
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.badge-violet {
+    color: var(--violet);
+    background: var(--violet-bg);
     border-color: rgba(245, 158, 11, 0.2);
 }
 
@@ -1036,6 +1053,7 @@ body::after {
 
 .caso-card.juris::before { background: linear-gradient(180deg, var(--teal), #14b8a6); }
 .caso-card.practico::before { background: linear-gradient(180deg, var(--amber), #d97706); }
+.caso-card.desarrollo::before { background: linear-gradient(180deg, var(--violet), #7c3aed); }
 
 .caso-card:hover {
     background: var(--bg-card-hover);
@@ -1058,6 +1076,33 @@ body::after {
 
 .caso-card.juris .caso-number { color: var(--teal); background: var(--teal-bg); }
 .caso-card.practico .caso-number { color: var(--amber); background: var(--amber-bg); }
+.caso-card.desarrollo .caso-number { color: var(--violet); background: var(--violet-bg); }
+
+.caso-tema {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--violet);
+    background: var(--violet-bg);
+    border: 1px solid rgba(167, 139, 250, 0.15);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.caso-nota-examen {
+    font-size: 0.78rem;
+    color: var(--warning);
+    font-style: italic;
+    padding: 10px 14px;
+    background: var(--warning-bg);
+    border: 1px solid rgba(251, 191, 36, 0.12);
+    border-radius: var(--radius-sm);
+    margin-top: 12px;
+    line-height: 1.5;
+}
 
 .caso-titulo {
     font-size: 1.05rem;

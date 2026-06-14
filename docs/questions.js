@@ -283,3 +283,73 @@ const CASOS_PRACTICOS = [
         ]
     },
 ];
+
+// ============================================
+// PREGUNTAS DE DESARROLLO (60%)
+// ============================================
+const CASOS_DESARROLLO = [
+    {
+        id: 1,
+        codigo: "D1",
+        tema: "Tema 4: Incapacidad permanente, jubilación y sostenibilidad",
+        titulo: "Incapacidad permanente y sus grados",
+        descripcion: "Defina la incapacidad permanente y explique sus requisitos generales, sus notas características y sus grados: incapacidad permanente parcial, total, absoluta y gran invalidez. Distinga entre contingencias comunes y profesionales, modalidad contributiva y no contributiva, forma de cálculo y compatibilidad con el trabajo.",
+        nota: "Extensión aproximada: medio folio por cara. Se valorará negativamente la mera enumeración sin explicación jurídica suficiente."
+    },
+    {
+        id: 2,
+        codigo: "D2",
+        tema: "Tema 4: Incapacidad permanente, jubilación y sostenibilidad",
+        titulo: "Modalidades de jubilación",
+        descripcion: "Explique la jubilación ordinaria, sus requisitos de edad y cotización, el periodo mínimo de cotización, la base reguladora y el porcentaje aplicable. Desarrolle también las fórmulas para jubilarse antes de la edad ordinaria, la jubilación parcial, la jubilación activa o compatible con trabajo y la jubilación demorada, con sus requisitos y efectos sobre la cuantía.",
+        nota: "Extensión aproximada: medio folio por cara. Se valorará negativamente la mera enumeración sin explicación jurídica suficiente."
+    },
+    {
+        id: 3,
+        codigo: "D3",
+        tema: "Tema 4: Incapacidad permanente, jubilación y sostenibilidad",
+        titulo: "Jubilación: definición, modelos, cuantía y modalidad no contributiva",
+        descripcion: "Defina la jubilación como prestación de Seguridad Social y explique sus principales modelos o modalidades: jubilación ordinaria, anticipada, parcial, activa o compatible con el trabajo y demorada. Indique los requisitos generales de acceso, la forma de cálculo de la cuantía, la base reguladora, los porcentajes aplicables y los efectos de anticipar o retrasar la jubilación. Incluya también la jubilación no contributiva, sus requisitos básicos de edad, residencia, carencia de rentas y finalidad protectora.",
+        nota: "Extensión aproximada: medio folio por cara. Se valorará negativamente la mera enumeración sin explicación jurídica suficiente."
+    },
+    {
+        id: 4,
+        codigo: "D4",
+        tema: "Tema 4: Incapacidad permanente, jubilación y sostenibilidad",
+        titulo: "Sostenibilidad del sistema español de pensiones",
+        descripcion: "Exponga qué plantea la AIReF sobre la sostenibilidad del sistema de pensiones español, qué medidas propone o analiza y formule una opinión propia fundamentada. Deben considerarse factores endógenos y exógenos: envejecimiento demográfico, esperanza de vida, mercado de trabajo, productividad, cotizaciones, financiación vía impuestos, reformas paramétricas, equidad intergeneracional y suficiencia de las pensiones.",
+        nota: "Extensión aproximada: medio folio por cara. Se valorará negativamente la mera enumeración sin explicación jurídica suficiente."
+    },
+    {
+        id: 5,
+        codigo: "D5",
+        tema: "Temas 5, 6 y 8: Asistencia social, contingencias y entidades",
+        titulo: "Prestaciones de asistencia social del sistema",
+        descripcion: "Desarrolle el esquema básico de asistencia social dentro del sistema de Seguridad Social. Incluya la asistencia social tradicional, los servicios sociales, el Ingreso Mínimo Vital y las ayudas de asistencia social gestionadas por las mutuas a través de la Comisión de Prestaciones Especiales para situaciones de necesidad derivadas de contingencias profesionales.",
+        nota: "Extensión aproximada: medio folio por cara. Se valorará negativamente la mera enumeración sin explicación jurídica suficiente."
+    },
+    {
+        id: 6,
+        codigo: "D6",
+        tema: "Temas 5, 6 y 8: Asistencia social, contingencias y entidades",
+        titulo: "Entidades intervinientes",
+        descripcion: "Explique el papel del INSS, TGSS, ISM, mutuas colaboradoras, SEPE, Servicios Públicos de Salud y Servicios Sociales autonómicos, diferenciando gestión económica, afiliación/recaudación, asistencia sanitaria, servicios sociales y colaboración en la gestión.",
+        nota: "Extensión aproximada: medio folio por cara. Se valorará negativamente la mera enumeración sin explicación jurídica suficiente."
+    },
+    {
+        id: 7,
+        codigo: "D7",
+        tema: "Temas 5, 6 y 8: Asistencia social, contingencias y entidades",
+        titulo: "Definición de contingencias",
+        descripcion: "Defina contingencia común y contingencia profesional. Preste especial atención al accidente de trabajo y a la enfermedad profesional: accidente en tiempo y lugar de trabajo, accidente in itinere, enfermedades relacionadas con el trabajo, presunciones aplicables, peculiaridades de los trabajadores autónomos y efectos sobre asistencia sanitaria, cotización y prestaciones.",
+        nota: "Extensión aproximada: medio folio por cara. Se valorará negativamente la mera enumeración sin explicación jurídica suficiente."
+    },
+    {
+        id: 8,
+        codigo: "D8",
+        tema: "Temas 5, 6 y 8: Asistencia social, contingencias y entidades",
+        titulo: "Accidente de trabajo, presunción de laboralidad y accidente in itinere",
+        descripcion: "Defina el accidente laboral y explique la presunción de laboralidad de las lesiones producidas durante el tiempo y en el lugar de trabajo. Desarrolle el concepto de accidente in itinere y los cuatro elementos que debe cumplir: elemento teleológico, cronológico, topográfico y modal. Distinga esta figura de los desplazamientos por orden empresarial y valore el efecto de la imprudencia profesional, la imprudencia temeraria y las interrupciones o desviaciones del trayecto.",
+        nota: "Extensión aproximada: medio folio por cara. Se valorará negativamente la mera enumeración sin explicación jurídica suficiente."
+    },
+];

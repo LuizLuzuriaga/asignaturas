@@ -496,6 +496,43 @@ function showCasos(type) {
             `;
             container.appendChild(card);
         });
+    } else if (type === 'desarrollo') {
+        title.textContent = '✍️ Preguntas de Desarrollo (60%)';
+        subtitle.textContent = 'Conteste de forma razonada. Extensión aproximada: medio folio por cara';
+
+        CASOS_DESARROLLO.forEach(caso => {
+            const card = document.createElement('div');
+            card.className = 'caso-card desarrollo';
+
+            let respuestaHtml = '';
+            if (caso.respuesta) {
+                const paragraphs = caso.respuesta.split('\n\n').map(p => `<p>${p}</p>`).join('');
+                respuestaHtml = `
+                    <button class="caso-answer-toggle caso-respuesta-toggle" onclick="toggleRespuesta(this)">
+                        📋 Respuesta completa
+                    </button>
+                    <div class="caso-respuesta">
+                        <div class="caso-respuesta-content">${paragraphs}</div>
+                    </div>
+                `;
+            }
+
+            card.innerHTML = `
+                <div class="caso-number">${caso.codigo}</div>
+                <div class="caso-tema">${caso.tema}</div>
+                <div class="caso-titulo">${caso.titulo}</div>
+                <div class="caso-descripcion">${caso.descripcion}</div>
+                <div class="caso-nota-examen">${caso.nota}</div>
+                <button class="caso-answer-toggle" onclick="toggleNotes(this)">
+                    ✏️ Mis notas / Resolución
+                </button>
+                <div class="caso-notes">
+                    <textarea placeholder="Redacta aquí tu respuesta de desarrollo..." style="min-height:180px;"></textarea>
+                </div>
+                ${respuestaHtml}
+            `;
+            container.appendChild(card);
+        });
     }
 
     showScreen('casosScreen');
