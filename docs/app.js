@@ -439,6 +439,19 @@ function showCasos(type) {
                 refHtml = `<div class="caso-referencia">📄 ${caso.referencia}</div>`;
             }
 
+            let respuestaHtml = '';
+            if (caso.respuesta) {
+                const paragraphs = caso.respuesta.split('\n\n').map(p => `<p>${p}</p>`).join('');
+                respuestaHtml = `
+                    <button class="caso-answer-toggle caso-respuesta-toggle" onclick="toggleRespuesta(this)">
+                        📋 Respuesta completa
+                    </button>
+                    <div class="caso-respuesta">
+                        <div class="caso-respuesta-content">${paragraphs}</div>
+                    </div>
+                `;
+            }
+
             card.innerHTML = `
                 <div class="caso-number">Caso ${caso.id}</div>
                 <div class="caso-titulo">${caso.titulo}</div>
@@ -451,6 +464,7 @@ function showCasos(type) {
                 <div class="caso-notes">
                     <textarea placeholder="Escribe aquí tu análisis del caso..."></textarea>
                 </div>
+                ${respuestaHtml}
             `;
             container.appendChild(card);
         });
