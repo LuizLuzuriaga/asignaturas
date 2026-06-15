@@ -222,17 +222,8 @@ const CASOS_JURIS = [
         pregunta: "¿Es accidente laboral?",
         referencia: "STS 24 feb 2014, Rec. 145/2013",
         respuesta: "Sí es accidente de trabajo. Para el trabajador del mar, el buque es simultáneamente lugar de trabajo y residencia durante la campaña. Aunque el accidente ocurra en tiempo de descanso y el buque esté en puerto extranjero, el trabajador permanecá a bordo por exigencia de la actividad laboral. Se aplica una lógica de accidente en misión permanente: el descanso a bordo no rompe el nexo causal. La STS de 24 de febrero de 2014 reconoció la laboralidad del accidente sufrido a bordo durante el descanso en puerto extranjero."
-    }
-]; trabajo?",
-        referencia: "Sentencia Social 3674/2022, TSJ Comunidad Valenciana, Sala de lo Social, Rec. 450/2022 de 29 de noviembre de 2022"
     },
-    {
-        id: 19,
-        titulo: "Cocinero de buque en puerto de Senegal",
-        descripcion: "Trabajador del Mar, cocinero de buque de 'merlucero' de Lugo que, estando atracado en un puerto de Senegal, en tiempo de descanso se accidenta en el buque.",
-        pregunta: "¿Es accidente laboral?",
-        referencia: "STS 24 feb 2014, Rec. 145/2013"
-    },
+    
 ];
 
 // ============================================
