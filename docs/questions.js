@@ -70,134 +70,160 @@ const TEST_QUESTIONS = [
     {q:"El presupuesto de las mutuas forma parte del presupuesto de la Seguridad Social", o:["a) Sí","b) No"], ans:"a"},
 ];
 
-// ============================================
-// CASOS JURISPRUDENCIALES - ¿Es accidente de trabajo?
-// ============================================
 const CASOS_JURIS = [
     {
         id: 1,
         titulo: "Caso del garaje del chalet",
         descripcion: "Un trabajador se dirige al trabajo y, cuando va a coger el coche en el garaje de su chalet, se escurre en las escaleras y se cae.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "No es accidente de trabajo. El accidente in itinere comienza cuando el trabajador abandona su domicilio privativo hacia la vía pública. El garaje del chalet forma parte de la finca particular del trabajador y no del trayecto laboral protegido. La caída en la escalera del garaje propio es un accidente doméstico, porque el recorrido laboral todavía no ha comenzado y no concurren los elementos del in itinere."
     },
     {
         id: 2,
         titulo: "Caso de la notaría",
         descripcion: "Yendo a trabajar, el trabajador deja unos papeles en la notaría de la empresa y se accidenta al salir de la notaría.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "Sí es accidente de trabajo. La entrega de papeles en la notaría de la empresa responde a una finalidad empresarial y no a un interés personal. El desplazamiento se conecta directamente con una orden o gestión laboral, por lo que el accidente al salir de la notaría mantiene el nexo causal con el trabajo, pudiendo calificarse incluso como desplazamiento por orden empresarial o accidente en misión conforme al artículo 156.2.c LGSS."
     },
     {
         id: 3,
         titulo: "Caso de trámite personal",
         descripcion: "Si va a firmar algo para tramitar asuntos personales.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "No es accidente de trabajo. La parada para firmar o gestionar asuntos estrictamente personales rompe el elemento teleológico del accidente in itinere, porque el trayecto deja de tener como finalidad principal acudir al trabajo. Al no existir finalidad laboral ni necesidad socialmente normal vinculada al desplazamiento, el nexo causal queda interrumpido."
     },
     {
         id: 4,
         titulo: "Caso del autobús",
         descripcion: "Esperando al autobús en el que va al trabajo, le atropella un coche.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "Sí es accidente de trabajo in itinere. Concurren los cuatro elementos exigidos: teleológico, porque se dirige al trabajo; cronológico, si ocurre en tiempo razonable de entrada; topográfico, porque está en la parada o ruta habitual; y modal, porque el transporte público es un medio adecuado. El atropello por un tercero no rompe la calificación laboral."
     },
     {
         id: 5,
         titulo: "Caso del portal fregado",
         descripcion: "María sale de su piso para ir al trabajo y se escurre en el pasillo del portal porque el portero acababa de fregar el suelo.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "Sí es accidente de trabajo in itinere. María ya ha abandonado su piso privativo y se encuentra en una zona común del edificio, como el portal o pasillo. La jurisprudencia suele considerar iniciado el trayecto protegido desde la salida de la vivienda privativa hacia zonas comunes. El suelo fregado es un riesgo del recorrido y no rompe el nexo laboral."
     },
     {
         id: 6,
         titulo: "Caso del regreso a casa",
         descripcion: "Luis tiene horario de 8 a 15:15, trabaja presencial, y de camino a su casa tiene un accidente.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "Sí es accidente de trabajo in itinere. El artículo 156.2.a LGSS protege tanto el trayecto de ida al trabajo como la vuelta desde este. Si Luis regresa a su domicilio tras finalizar la jornada y lo hace por un itinerario razonable, en tiempo adecuado y con medio normal, concurren los elementos del in itinere."
     },
     {
         id: 7,
         titulo: "Caso de la comida de trabajo",
         descripcion: "El jefe organiza una comida de trabajo y, al salir del restaurante, un trabajador se tuerce un tobillo y se lo fractura.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "Sí es accidente de trabajo. La comida está organizada por el jefe con finalidad laboral, por lo que se integra en la esfera del trabajo y se asemeja a una reunión o acto de empresa. La lesión al salir del restaurante se produce con ocasión de esa actividad laboral y mantiene el nexo causal exigido por el artículo 156.1 LGSS."
     },
     {
         id: 8,
         titulo: "Caso de la cena de Navidad",
         descripcion: "El jefe organiza una cena de Navidad con copa y, al salir del restaurante, un trabajador se tuerce un tobillo y se lo fractura.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "No es accidente de trabajo, salvo que se acrediten circunstancias laborales especialmente intensas. A diferencia de una comida de trabajo, la cena de Navidad con copa tiene carácter social y festivo, normalmente voluntario y lúdico. Sin orden expresa de asistencia ni contenido laboral claro, el nexo con el trabajo resulta demasiado tenue."
     },
     {
         id: 9,
         titulo: "Caso del banco (José Luis)",
         descripcion: "José Luis, ingeniero de la empresa, va al banco a entregar documentación mandado por su jefe (al no estar el secretario), y le atropella una bicicleta.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "Sí es accidente de trabajo. José Luis se desplaza al banco por orden directa de su jefe para entregar documentación de la empresa. Se trata de un desplazamiento por orden empresarial, encuadrable como accidente en misión o accidente durante la ejecución de una tarea laboral. El atropello está plenamente conectado con el trabajo."
     },
     {
         id: 10,
         titulo: "Caso de la cocina en teletrabajo",
         descripcion: "Luis tiene horario de 8 a 15:15 y teletrabaja 4 días a la semana, incluidos los lunes. En el descanso del desayuno se escurre en la cocina de su casa y se fractura el pie.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "Sí es accidente de trabajo, con matices. La Ley 10/2021 equipara la protección del teletrabajador a la del trabajador presencial. El descanso para desayunar es una pausa ordinaria de la jornada, similar a la pausa de café en una oficina. Al ocurrir dentro del horario y en el domicilio habilitado como lugar de trabajo, se mantiene el nexo laboral."
     },
     {
         id: 11,
         titulo: "Caso del ictus en teletrabajo",
         descripcion: "El mismo Luis, estando delante del ordenador a las 13:17, en teletrabajo, tiene un ictus grave y fallece.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "Sí es accidente de trabajo. El ictus ocurre a las 13:17, dentro de la jornada, delante del ordenador y en el lugar de teletrabajo. Concurren tiempo y lugar de trabajo, por lo que se activa la presunción del artículo 156.3 LGSS. La causa interna no destruye por sí sola la presunción; correspondería a la entidad gestora o mutua probar una causa totalmente ajena."
     },
     {
         id: 12,
         titulo: "Caso de la imprudencia temeraria",
         descripcion: "Un trabajador va ebrio al trabajo utilizando la ruta habitual.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "No es accidente de trabajo si la embriaguez determina una imprudencia temeraria causal. El artículo 156.4.b LGSS excluye la laboralidad cuando la lesión se debe a dolo o imprudencia temeraria del trabajador. Ir ebrio al trabajo puede suponer un riesgo consciente y desproporcionado que rompe el nexo protegido, aunque la ruta sea la habitual."
     },
     {
         id: 13,
         titulo: "Caso del andamio",
         descripcion: "En la obra, un trabajador utiliza el arnés de seguridad, se sube 8 pisos por el andamio, se escurre y se cae. Aunque haya tenido el curso correspondiente o se le haya indicado de forma reiterada las medidas de seguridad.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "Sí es accidente de trabajo. El trabajador está en la obra, durante la jornada y realizando su actividad habitual. La caída desde el andamio es un riesgo propio del trabajo en altura. La formación recibida o la existencia de instrucciones preventivas no eliminan la laboralidad; solo podrían influir en responsabilidades preventivas o recargo, pero no excluyen el accidente salvo imprudencia temeraria acreditada."
     },
     {
         id: 14,
         titulo: "Caso de Antonio (infarto)",
         descripcion: "Antonio pesa 317 kg, fuma y bebe habitualmente, ha tenido 4 infartos previos, tiene un horario de 8 a 15 horas, y a las 11 —sin estar realizando ningún esfuerzo en la empresa ni estar sometido a estrés— le da un infarto y fallece.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: null
+        referencia: null,
+        respuesta: "Sí es accidente de trabajo por presunción. El infarto se produce a las 11:00, dentro de la jornada y en las instalaciones de la empresa. La presunción del artículo 156.3 LGSS opera incluso ante patologías previas o factores personales de riesgo. Para destruirla, la entidad gestora o mutua tendría que probar de forma concluyente que el trabajo no contribuyó en absoluto al evento cardiovascular."
     },
     {
         id: 15,
         titulo: "Rafael – Teletrabajo y caída en el baño",
         descripcion: "Rafael trabaja para una empresa de seguros y teletrabaja 3 días a la semana. El lunes, estando teletrabajando, interrumpe el tiempo de trabajo para ir al baño y, al salir del mismo, se escurre, cae y se fractura la muñeca.",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: "SJS 1 de Cáceres de 26 de octubre, núm. 297/2022"
+        referencia: "SJS 1 de Cáceres de 26 de octubre, núm. 297/2022",
+        respuesta: "Sí es accidente de trabajo. Rafael estaba en tiempo de trabajo y su domicilio habilitado funcionaba como lugar de trabajo conforme a la normativa de teletrabajo. La interrupción para ir al baño es una necesidad fisiológica inherente a cualquier jornada, equivalente a lo que ocurriría en una oficina, y no supone una ruptura voluntaria de la esfera laboral. Al concurrir tiempo y lugar de trabajo, opera la presunción de laboralidad del artículo 156.3 LGSS. La SJS núm. 1 de Cáceres 297/2022 confirmó esta calificación."
     },
     {
         id: 16,
         titulo: "Atropello en tiempo de descanso",
         descripcion: "¿Se considera accidente de trabajo el atropello sufrido por un trabajador durante el tiempo de descanso cuando se dirigía a su vehículo situado en las inmediaciones del centro de trabajo con la intención de aparcarlo más cerca?",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: "Sentencia del Tribunal Supremo del 13 de octubre de 2021, núm. 1008/2021, Rec. 5042/2018"
+        referencia: "Sentencia del Tribunal Supremo del 13 de octubre de 2021, núm. 1008/2021, Rec. 5042/2018",
+        respuesta: "No es accidente de trabajo. El accidente ocurre durante el tiempo de descanso y no durante tiempo efectivo de trabajo, por lo que no se activa automáticamente la presunción del artículo 156.3 LGSS. Además, mover el vehículo para aparcarlo más cerca responde a una conveniencia personal, no a una necesidad laboral ni fisiológica. Las inmediaciones del centro no equivalen al lugar de trabajo cuando el desplazamiento obedece a una gestión privada. La STS 1008/2021 negó la calificación como accidente de trabajo por ruptura del nexo causal."
     },
     {
         id: 17,
         titulo: "Caída en la ducha del hotel (formación)",
         descripcion: "¿Se considera accidente de trabajo la caída en la ducha del hotel donde una trabajadora está alojada para una formación convocada por la empresa?",
         pregunta: "¿Es accidente de trabajo?",
-        referencia: "STS n.º 278/2023, de 18 de abril"
+        referencia: "STS n.º 278/2023, de 18 de abril",
+        respuesta: "Sí es accidente de trabajo. La trabajadora se encontraba alojada en ese hotel porque la empresa la había convocado a una formación fuera de su domicilio. Aplica la doctrina del accidente en misión, ya que el desplazamiento y la estancia se producen por causa del trabajo. La ducha es una actividad básica de higiene y subsistencia, necesaria para mantener la capacidad de trabajar, y no un acto de ocio que rompa el nexo laboral. La STS 278/2023 confirma que el accidente en misión comprende actos necesarios durante la estancia impuesta por la actividad profesional."
     },
     {
         id: 18,
         titulo: "Pedro Jesús – Desplome tras fichar",
         descripcion: "El 30 de junio de 2019, Pedro Jesús, tras finalizar su jornada de trabajo, una vez había fichado a las 6:17 horas a través del sistema de huella dactilar y vistiendo ropa de calle, se desplomó cayendo al suelo en las instalaciones de la empresa.",
         pregunta: "¿Es accidente de trabajo?",
+        referencia: "Sentencia Social 3674/2022, TSJ Comunidad Valenciana, Sala de lo Social, Rec. 450/2022 de 29 de noviembre de 2022",
+        respuesta: "Sí es accidente de trabajo. Aunque había fichado la salida y vestía ropa de calle, seguía físicamente dentro de las instalaciones empresariales. Fichar no equivale automáticamente a abandonar el lugar de trabajo, porque el tránsito desde el puesto hasta la salida forma parte del ámbito laboral por extensión. Al producirse el desplome en las instalaciones del empleador, opera la presunción de laboralidad del artículo 156.3 LGSS, salvo prueba concluyente de causa totalmente ajena. El STSJ de la Comunidad Valenciana aplicó dicha presunción y calificó el hecho como accidente de trabajo."
+    },
+    {
+        id: 19,
+        titulo: "Cocinero de buque en puerto de Senegal",
+        descripcion: "Trabajador del Mar, cocinero de buque de 'merlucero' de Lugo que, estando atracado en un puerto de Senegal, en tiempo de descanso se accidenta en el buque.",
+        pregunta: "¿Es accidente laboral?",
+        referencia: "STS 24 feb 2014, Rec. 145/2013",
+        respuesta: "Sí es accidente de trabajo. Para el trabajador del mar, el buque es simultáneamente lugar de trabajo y residencia durante la campaña. Aunque el accidente ocurra en tiempo de descanso y el buque esté en puerto extranjero, el trabajador permanecá a bordo por exigencia de la actividad laboral. Se aplica una lógica de accidente en misión permanente: el descanso a bordo no rompe el nexo causal. La STS de 24 de febrero de 2014 reconoció la laboralidad del accidente sufrido a bordo durante el descanso en puerto extranjero."
+    }
+]; trabajo?",
         referencia: "Sentencia Social 3674/2022, TSJ Comunidad Valenciana, Sala de lo Social, Rec. 450/2022 de 29 de noviembre de 2022"
     },
     {
